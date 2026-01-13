@@ -1,4 +1,4 @@
-# Stripe Press – Simple E-commerce Application
+# Stripe Press – E-commerce Application
 
 ## Application Overview
 

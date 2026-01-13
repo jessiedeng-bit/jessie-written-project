@@ -21,7 +21,10 @@ git clone https://github.com/jessiedeng-bit/jessie-written-project.git
 pip3 install -r requirements.txt
 ```
 - Rename sample.env to .env and populate it with your Stripe account's test API keys.
-- Then run the application locally: flask run
+- Then run the application locally:
+```bash
+flask run
+```
 - Navigate to http://localhost:5000 to view the index page.
 
 

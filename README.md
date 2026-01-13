@@ -26,8 +26,8 @@ pip3 install -r requirements.txt
 
 
 ## Application architecture
-- Payment flow integration: Collect payment details before creating an Intent
-- Architecture - Sequence diagram
+- Payment flow integration: [Collect payment details before creating an Intent](https://docs.stripe.com/payments/accept-a-payment-deferred?type=payment&lang=python)
+- Architecture - [Sequence diagram](https://swimlanes.io/#nVVNb9swDD3Pv4LHZMsHeg2wDljSbgU2LGiGXVNVZmoisuVJVJtg2H8fbTkfq90umQ9yZJGPj4+k4vFnwELjjNSDU3nyBuQplWPSVKqCYapcmlmTomuffUWns+rHtbMFY5G+YvJR6XWnxYIdlRi/H4INLy9b6BP4QZ4YxtG4dX7s04SbwKer7y2H5nDYHeRWVnRAsm5GGecGeqWzadAMWvj5/mlcp4b0GuahOvAIPRw9jIgxf3/RP5u/zlCvbeAPEeCFdLrcv1i7DiVUfsDEBuEdlI40/o8kOxpRlSfirAYegMptEAdVpDHIaQpdkzGAuSIzkI7Y5iinKbLsfQ2lo4Jqe45ei3CfS49YF2u4si5XTLY4QzOtjA5GMS5rlGXMrlel+rx0B5jYxhOYf1tIwR4vxk1GS6q4MkTHaDXsDHuLHFwBJS03m81OgArBo3bIZxasxnoN4EjFHfepkoL4ejPStliRy+cxi14/lvvKYLX1oqxnVezaqCOtYy4pOZTpCR6dB7bgmi/L4ExS+f9T1XoKWqKOf8X3b0hOFLdJ5ybW5Kg9wAedgfJNKw9EBsXBDyCXhkwVq7r8cDPrJ+fPjWBr9P5obF7kkXTXSOAP0zSBGfnSqO1+aiLZumd2A7S/b/acaTWRBLeFzgTVivkT3mdyPSRRNxhettKScZIV7v6WffT2DvCxaoPkuUM3yGchJjdP41P9C/wB)
 - Frontend: Stripe JavaScript SDK & HTML
 - Backend: Python with Flask framework
   - Endpoints:
@@ -45,9 +45,9 @@ pip3 install -r requirements.txt
 - Refer to the integration guide on creating a checkout page using Payment Element[0], identify and build the server endpoints such as ‘/create-payment-intent’.
 - According to the Payment Element integration best practices, update the payment flow to collect payment details first and create Payment Intent when submitting the payment form and confirm the payment from the frontend [1][2].
 - Documentation references:
-  - [0] - Build a checkout page with Payment Intents API
-  - [1] - Payment Element integration best practices
-  - [2] - stripe.confirmPayment
+  - [0] - [Build a checkout page with Payment Intents API](https://docs.stripe.com/payments/quickstart?lang=python&platform=web)
+  - [1] - [Payment Element integration best practices](https://docs.stripe.com/payments/payment-element/best-practices)
+  - [2] - [stripe.confirmPayment](https://docs.stripe.com/js/payment_intents/confirm_payment)
 
 ## Challenges
 - Ensure item ID is smoothly passed over between frontend and backend

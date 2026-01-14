@@ -38,6 +38,9 @@ flask run
     - GET /checkout: render checkout.html
     - POST /create-payment-intent: Create Payment Intent with Stripe
     - GET /success: Retrieve Payment Intent details from Stripe and render success.html
+  - Functions:
+    - calculate_order_amount: calculate order payment amount based on the item ID
+
 - Stripe API:
   - Create a PaymentIntent: POST POST /v1/payment_intent
   - Retrieve a PaymentIntent: GET /v1/payment_intent/{intent}

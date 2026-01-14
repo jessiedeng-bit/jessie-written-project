@@ -35,9 +35,10 @@ flask run
 - Backend: Python with Flask framework
   - Endpoints:
     - GET /: render index.html
-    - GET /checkout: render checkout.html
-    - POST /create-payment-intent: Create Payment Intent with Stripe
+    - GET /checkout: render checkout.html with order information
+    - POST /create-payment-intent: Create Payment Intent with Stripe and return client_secret to the frontend
     - GET /success: Retrieve Payment Intent details from Stripe and render success.html
+
   - Functions:
     - calculate_order_amount: calculate order payment amount based on the item ID
 
@@ -48,7 +49,7 @@ flask run
 
 ## Approach
 - Check starter codes and existing functionalities of the application and identify the missing functionalities I will need to build.
-- Refer to the integration guide on creating a checkout page using Payment Element[0], identify and build the server endpoints such as ‘/create-payment-intent’.
+- Refer to the integration guide on creating a checkout page using Payment Element[0], identify and build all the necessary server endpoints such as ‘/create-payment-intent’.
 - According to the Payment Element integration best practices, update the payment flow to collect payment details first and create Payment Intent when submitting the payment form and confirm the payment from the frontend [1][2].
 - Documentation references:
   - [0] - [Build a checkout page with Payment Intents API](https://docs.stripe.com/payments/quickstart?lang=python&platform=web)

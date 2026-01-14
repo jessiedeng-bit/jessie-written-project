@@ -12,6 +12,7 @@ Users can:
   - Total charged amount
   - Book item ID
   - Stripe Payment Intent ID
+  - Back to Home page and buy another book
 
 
 ## Get started

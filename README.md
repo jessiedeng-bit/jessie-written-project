@@ -53,7 +53,7 @@ According to the Payment Element integration best practices, I use the deferred 
 The starter code uses server-rendered integration for Python, therefore I decided to continue using this approach because the application is small and follows a simple, linear user flow. It also reduces integration complexity.
 
 Frontend:
-- The frontend is built using Flask’s Jinja2 templating engine along with standard HTML, CSS, and JavaScript. 
+- The frontend is built using Flask’s Jinja templating engine along with standard HTML, CSS, and JavaScript. 
 - The UI is organized into reusable templates:
   - A shared base layout (layouts/main.html) defines the global page structure, styling imports, and common elements.
   - Individual views (index.html, checkout.html, success.html) extend the base layout and focus only on rendering page-specific content.

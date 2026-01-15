@@ -49,6 +49,21 @@ flask run
 
 
 ## Approach
+According to the Payment Element integration best practices, I use the deferred intent flow to collect payment details first and create Payment Intent when submitting the payment form and confirm the payment from the frontend.
+The starter code uses server-rendered integration for Python, therefore I decided to continue using this approach because the application is small and follows a simple, linear user flow. It also reduces integration complexity.
+
+Frontend:
+- The frontend is built using Flask’s Jinja2 templating engine along with standard HTML, CSS, and JavaScript. 
+- The UI is organized into reusable templates:
+  - A shared base layout (layouts/main.html) defines the global page structure, styling imports, and common elements.
+  - Individual views (index.html, checkout.html, success.html) extend the base layout and focus only on rendering page-specific content.
+- checkout.js is used to initialize Stripe & Element, create and mount the Payment Element onto the checkout form, handle submit event, fetch a payment intent, confirm the payment by calling stripe.confirmPayment with Element instance, and handle error such as the card is declined.
+  
+Backend:
+- The backend is implemented using Flask and Flask handles rendering pages for index.html, checkout.html, success.html, as well as creating PaymentIntents with Stripe. After a payment is confirmed, the backend retrieves the PaymentIntent details from Stripe and displays the relevant confirmation information to the user.
+- Stripe API keys are managed securely using environment variables, which are loaded with python-dotenv to avoid hardcoding sensitive credentials.
+
+Thought Process:
 - Check starter codes and existing functionalities of the application and identify the missing functionalities I will need to build.
 - Refer to the integration guide on creating a checkout page using Payment Element[0], identify and build all the necessary server endpoints such as ‘/create-payment-intent’.
 - According to the Payment Element integration best practices, update the payment flow to collect payment details first and create Payment Intent when submitting the payment form and confirm the payment from the frontend [1][2].
